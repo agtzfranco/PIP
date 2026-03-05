@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Metadatos para investigación académica -->
+  <meta name="description" content="Colectivo Primario - Estudio profesional de tatuajes y piercings en Monterrey. Arte personalizado con técnica depurada.">
+  <meta name="author" content="Colectivo Primario | Proyecto Académico 2026">
+  <meta name="keywords" content="tatuajes, piercings, Monterrey, arte corporal, estudio">
+  
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:title" content="Colectivo Primario | Tatuajes y Piercings en Monterrey">
+  <meta property="og:description" content="Arte que perdura. Estudio especializado en tatuajes personalizados y piercings profesionales.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  
+  <title>Colectivo Primario | Tatuajes y Piercings en Monterrey</title>
+  
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Fuentes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- 
+    =====================================================
+    PROYECTO ACADÉMICO - COLECTIVO PRIMARIO
+    Periodo: Enero - Abril 2026
+    Metodología: UX + CRO + Medición de KPIs
+    Objetivo: +30% consultas digitales
+    Contacto: Guillermo Márquez | gmrqzf@gmail.com | 8121972533
+    Ubicación: Monterrey, Nuevo León, México
+    =====================================================
+  -->
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header__container">
+      <a href="#" class="header__logo" aria-label="Ir al inicio">
+        <span class="logo__text">COLECTIVO</span>
+        <span class="logo__accent">PRIMARIO</span>
+      </a>
+      
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#servicios" class="nav__link">Servicios</a></li>
+          <li><a href="#artistas" class="nav__link">Artistas</a></li>
+          <li><a href="#portafolio" class="nav__link">Portafolio</a></li>
+          <li><a href="#estudio" class="nav__link">El Estudio</a></li>
+          <li><a href="#contacto" class="nav__link nav__link--cta">Contacto</a></li>
+        </ul>
+        <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <h1 class="hero__title">Arte que <span class="text-accent">perdura</span></h1>
+      <p class="hero__subtitle">Estudio en Monterrey especializado en tatuajes personalizados y piercings profesionales. Técnica depurada, enfoque único.</p>
+      
+      <div class="hero__actions">
+        <a href="https://wa.me/5218121972533?text=Hola%20Colectivo%20Primario,%20me%20interesa%20agendar%20una%20cita..." 
+           class="btn btn--primary" 
+           target="_blank" 
+           rel="noopener"
+           onclick="trackConversion('whatsapp_click')">
+          <i class="fab fa-whatsapp"></i> Agenda por WhatsApp
+        </a>
+        <a href="#contacto" class="btn btn--secondary">Contáctanos</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <a href="#servicios" aria-label="Desplazarse a servicios">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= SERVICIOS ================= -->
+  <section id="servicios" class="section servicios">
+    <div class="container">
+      <h2 class="section__title">Nuestros <span class="text-accent">Servicios</span></h2>
+      <p class="section__subtitle">Cada pieza es única, diseñada en colaboración contigo</p>
+      
+      <div class="servicios__grid">
+        <!-- Servicio 1: Tatuajes -->
+        <article class="servicio-card">
+          <div class="servicio-card__icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3 class="servicio-card__title">Tatuajes Personalizados</h3>
+          <p class="servicio-card__desc">Blackwork, línea fina, geométrico, realismo, tradicional y lettering. Diseños únicos creados junto a ti.</p>
+          <a href="#contacto" class="servicio-card__link">Cotizar diseño <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+        <!-- Servicio 2: Piercings -->
+        <article class="servicio-card">
+          <div class="servicio-card__icon">
+            <i class="fas fa-gem"></i>
+          </div>
+          <h3 class="servicio-card__title">Piercings Profesionales</h3>
+          <p class="servicio-card__desc">Perforaciones con técnica estéril, joyería de alta calidad y asesoría personalizada para tu estilo.</p>
+          <a href="#contacto" class="servicio-card__link">Agendar cita <i class="fas fa-arrow-right"></i></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ARTISTAS ================= -->
+  <section id="artistas" class="section artistas">
+    <div class="container">
+      <h2 class="section__title">Nuestros <span class="text-accent">Artistas</span></h2>
+      <p class="section__subtitle">Cada miembro de Colectivo Primario aporta su estilo único. Conoce quién puede dar vida a tu idea.</p>
+      
+      <!-- Filtros por especialidad -->
+      <div class="artistas__filters" role="tablist">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+        <button class="filter-btn" data-filter="tatuajes" role="tab">Tatuadores</button>
+        <button class="filter-btn" data-filter="piercings" role="tab">Piercers</button>
+      </div>
+
+      <div class="artistas__grid">
+        
+        <!-- ARTISTA 1: NEKO (Tatuajes) -->
+        <article class="artista-card" data-category="tatuajes">
+          <div class="artista-card__image">
+            <img src="" 
+                 alt="Neko - Artista de tatuajes en Colectivo Primario" 
+                 loading="lazy">
+            <span class="artista-card__badge">Tatuajes</span>
+          </div>
+          <div class="artista-card__content">
+            <h3 class="artista-card__name">Neko</h3>
+            <p class="artista-card__specialty">Blackwork • Geométrico • Línea fina</p>
+            <p class="artista-card__bio">Especialista en diseños minimalistas y patrones geométricos. Cada trazo cuenta una historia.</p>
+            
+            <div class="artista-card__actions">
+              <a href="#contacto" class="btn btn--outline btn--sm" onclick="selectArtist('Neko', 'tatuaje')">
+                Agendar con Neko
+              </a>
+              <button class="artista-card__portfolio" aria-label="Ver portafolio de Neko">
+                <i class="fas fa-eye"></i> Portafolio
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ARTISTA 2: DOEK (Tatuajes) -->
+        <article class="artista-card" data-category="tatuajes">
+          <div class="artista-card__image">
+            <img src=""
+                 alt="Doek - Artista de tatuajes en Colectivo Primario" 
+                 loading="lazy">
+            <span class="artista-card__badge">Tatuajes</span>
+          </div>
+          <div class="artista-card__content">
+            <h3 class="artista-card__name">Doek</h3>
+            <p class="artista-card__specialty">Realismo • Retratos • Color</p>
+            <p class="artista-card__bio">Maestro del realismo y la profundidad. Transforma tus referencias en arte corporal impresionante.</p>
+            
+            <div class="artista-card__actions">
+              <a href="#contacto" class="btn btn--outline btn--sm" onclick="selectArtist('Doek', 'tatuaje')">
+                Agendar con Doek
+              </a>
+              <button class="artista-card__portfolio" aria-label="Ver portafolio de Doek">
+                <i class="fas fa-eye"></i> Portafolio
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ARTISTA 3: DEBA (Tatuajes) -->
+        <article class="artista-card" data-category="tatuajes">
+          <div class="artista-card__image">
+            <img src=""
+                 alt="Deba - Artista de tatuajes en Colectivo Primario" 
+                 loading="lazy">
+            <span class="artista-card__badge">Tatuajes</span>
+          </div>
+          <div class="artista-card__content">
+            <h3 class="artista-card__name">Deba</h3>
+            <p class="artista-card__specialty">Tradicional • Neo-tradicional • Lettering</p>
+            <p class="artista-card__bio">Raíces en el tatuaje clásico con un toque contemporáneo. Color vibrante y líneas definidas.</p>
+            
+            <div class="artista-card__actions">
+              <a href="#contacto" class="btn btn--outline btn--sm" onclick="selectArtist('Deba', 'tatuaje')">
+                Agendar con Deba
+              </a>
+              <button class="artista-card__portfolio" aria-label="Ver portafolio de Deba">
+                <i class="fas fa-eye"></i> Portafolio
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ARTISTA 4: CORAZÓN TATTOO (Tatuajes) -->
+        <article class="artista-card" data-category="tatuajes">
+          <div class="artista-card__image">
+            <img src=""
+                 alt="Corazón Tattoo - Artista de tatuajes en Colectivo Primario" 
+                 loading="lazy">
+            <span class="artista-card__badge">Tatuajes</span>
+          </div>
+          <div class="artista-card__content">
+            <h3 class="artista-card__name">Corazón Tattoo</h3>
+            <p class="artista-card__specialty">Fine Line • Floral • Delicado</p>
+            <p class="artista-card__bio">Estilo suave y femenino. Especialista en piezas delicadas que celebran la belleza natural.</p>
+            
+            <div class="artista-card__actions">
+              <a href="#contacto" class="btn btn--outline btn--sm" onclick="selectArtist('Corazón Tattoo', 'tatuaje')">
+                Agendar con Corazón
+              </a>
+              <button class="artista-card__portfolio" aria-label="Ver portafolio de Corazón Tattoo">
+                <i class="fas fa-eye"></i> Portafolio
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ARTISTA 5: DAVID (Piercings) -->
+        <article class="artista-card" data-category="piercings">
+          <div class="artista-card__image">
+            <img src=""
+                 alt="David - Piercer profesional en Colectivo Primario" 
+                 loading="lazy">
+            <span class="artista-card__badge artist-piercing">Piercings</span>
+          </div>
+          <div class="artista-card__content">
+            <h3 class="artista-card__name">David</h3>
+            <p class="artista-card__specialty">Piercings • Joyería premium • Curación</p>
+            <p class="artista-card__bio">Técnica estéril y asesoría personalizada. Te guía en la elección de ubicación y joyería ideal.</p>
+            
+            <div class="artista-card__actions">
+              <a href="#contacto" class="btn btn--outline btn--sm" onclick="selectArtist('David', 'piercing')">
+                Agendar con David
+              </a>
+              <button class="artista-card__portfolio" aria-label="Ver portafolio de David">
+                <i class="fas fa-eye"></i> Portafolio
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      
+      <!-- CTA secundario para dudas -->
+      <div class="artistas__cta">
+        <p>¿No estás seguro de qué artista elegir?</p>
+        <a href="#contacto" class="btn btn--secondary">Te ayudamos a decidir</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTAFOLIO ================= -->
+  <section id="portafolio" class="section portafolio">
+    <div class="container">
+      <h2 class="section__title">Portafolio <span class="text-accent">Visual</span></h2>
+      <p class="section__subtitle">Explora nuestro trabajo y encuentra inspiración para tu próxima pieza</p>
+      
+      <!-- Filtros (solo tatuajes y piercings) -->
+      <div class="portafolio__filters" role="tablist">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+        <button class="filter-btn" data-filter="tatuajes" role="tab">Tatuajes</button>
+        <button class="filter-btn" data-filter="piercings" role="tab">Piercings</button>
+      </div>
+
+      <div class="portafolio__grid">
+        <!-- Imágenes placeholder - reemplazar con portafolio real -->
+        <figure class="portfolio-item" data-category="tatuajes">
+          <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?w=600" 
+               alt="Tatuaje blackwork geométrico en brazo" 
+               loading="lazy">
+          <figcaption>Blackwork geométrico</figcaption>
+        </figure>
+        <figure class="portfolio-item" data-category="piercings">
+          <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?w=600" 
+               alt="Piercing minimalista en oreja con joyería dorada" 
+               loading="lazy">
+          <figcaption>Piercing minimalista</figcaption>
+        </figure>
+        <figure class="portfolio-item" data-category="tatuajes">
+          <img src="https://images.unsplash.com/photo-1562962240-4c8a8ce5a8f1?w=600" 
+               alt="Tatuaje de línea fina en mano" 
+               loading="lazy">
+          <figcaption>Línea fina</figcaption>
+        </figure>
+        <figure class="portfolio-item" data-category="piercings">
+          <img src="https://images.unsplash.com/photo-1605735789129-2f6a6f5c8e9c?w=600" 
+               alt="Piercing septum con aro dorado" 
+               loading="lazy">
+          <figcaption>Septum dorado</figcaption>
+        </figure>
+        <figure class="portfolio-item" data-category="tatuajes">
+          <img src="https://images.unsplash.com/photo-1550537687-c910e7255c2c?w=600" 
+               alt="Tatuaje realista en brazo" 
+               loading="lazy">
+          <figcaption>Realismo</figcaption>
+        </figure>
+        <figure class="portfolio-item" data-category="piercings">
+          <img src="https://images.unsplash.com/photo-1590246545235-9e6a7e8e6b4d?w=600" 
+               alt="Piercing industrial" 
+               loading="lazy">
+          <figcaption>Industrial</figcaption>
+        </figure>
+      </div>
+      
+      <div class="portafolio__cta">
+        <a href="#contacto" class="btn btn--primary" onclick="trackConversion('portfolio_cta_click')">
+          ¿Te gusta lo que ves? Empecemos tu proyecto
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ESTUDIO / IDENTIDAD ================= -->
+  <section id="estudio" class="section estudio">
+    <div class="container estudio__container">
+      <div class="estudio__content">
+        <h2 class="section__title">Sobre <span class="text-accent">Nosotros</span></h2>
+        
+        <!-- Misión y Visión -->
+        <div class="estudio__identity">
+          <blockquote class="identity__mission">
+            <i class="fas fa-quote-left"></i>
+            <p>Ofrecer servicios artísticos y estéticos de alta calidad que reflejen la identidad y creatividad de cada cliente.</p>
+            <small>— Nuestra Misión</small>
+          </blockquote>
+          
+          <blockquote class="identity__vision">
+            <i class="fas fa-quote-left"></i>
+            <p>Consolidarnos como un estudio reconocido por su profesionalismo, innovación y presencia digital.</p>
+            <small>— Nuestra Visión</small>
+          </blockquote>
+        </div>
+        
+        <p class="estudio__text">
+          En <strong>Colectivo Primario</strong> creemos que el arte corporal es una forma de expresión única. 
+          Nuestro estudio en Monterrey combina técnica profesional, estándares de higiene rigurosos y una visión artística contemporánea.
+        </p>
+        
+        <ul class="estudio__values">
+          <li><i class="fas fa-check-circle"></i> Materiales estériles y de primera calidad</li>
+          <li><i class="fas fa-check-circle"></i> Artistas especializados por estilo</li>
+          <li><i class="fas fa-check-circle"></i> Asesoría personalizada desde la idea hasta el cuidado posterior</li>
+          <li><i class="fas fa-check-circle"></i> Espacio seguro, inclusivo y libre de juicios</li>
+          <li><i class="fas fa-check-circle"></i> Ubicación céntrica en Monterrey, cita previa</li>
+        </ul>
+        
+        <a href="#contacto" class="btn btn--outline">Conoce a nuestro equipo</a>
+      </div>
+      
+      <div class="estudio__image">
+        <img src="https://images.unsplash.com/photo-1598301251856-5c6f6a8d1c3e?w=800" 
+             alt="Interior del estudio Colectivo Primario en Monterrey" 
+             loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+  <section id="contacto" class="section contacto">
+    <div class="container">
+      <h2 class="section__title">Empieza tu <span class="text-accent">Proyecto</span></h2>
+      <p class="section__subtitle">Cuéntanos tu idea y te contactaremos en menos de 24 horas</p>
+      
+      <div class="contacto__container">
+        <!-- Formulario de contacto -->
+        <form class="contacto__form" id="contactForm" novalidate>
+          <div class="form__group">
+            <label for="nombre" class="form__label">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" class="form__input" placeholder="Tu nombre" required autocomplete="name">
+            <span class="form__error" id="errorNombre"></span>
+          </div>
+          
+          <div class="form__group">
+            <label for="email" class="form__label">Correo electrónico *</label>
+            <input type="email" id="email" name="email" class="form__input" placeholder="tu@email.com" required autocomplete="email">
+            <span class="form__error" id="errorEmail"></span>
+          </div>
+          
+          <div class="form__group">
+            <label for="telefono" class="form__label">Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" class="form__input" placeholder="+52 1 XX XXXX XXXX" autocomplete="tel">
+          </div>
+          
+          <div class="form__group">
+            <label for="artista" class="form__label">Artista de preferencia (opcional)</label>
+            <select id="artista" name="artista" class="form__input">
+              <option value="">Sin preferencia - Cualquier artista</option>
+              <option value="Neko">Neko (Tatuajes)</option>
+              <option value="Doek">Doek (Tatuajes)</option>
+              <option value="Deba">Deba (Tatuajes)</option>
+              <option value="Corazón Tattoo">Corazón Tattoo (Tatuajes)</option>
+              <option value="David">David (Piercings)</option>
+            </select>
+          </div>
+          
+          <div class="form__group">
+            <label for="servicio" class="form__label">Servicio de interés *</label>
+            <select id="servicio" name="servicio" class="form__input" required>
+              <option value="">Selecciona una opción</option>
+              <option value="tatuaje">Tatuaje personalizado</option>
+              <option value="piercing">Piercing</option>
+              <option value="coverup">Cover-up / Retoque</option>
+              <option value="otro">Otro</option>
+            </select>
+            <span class="form__error" id="errorServicio"></span>
+          </div>
+          
+          <div class="form__group">
+            <label for="mensaje" class="form__label">Cuéntanos tu idea *</label>
+            <textarea id="mensaje" name="mensaje" class="form__input form__textarea" rows="4" placeholder="Describe estilo, zona del cuerpo, referencias..." required></textarea>
+            <span class="form__error" id="errorMensaje"></span>
+          </div>
+          
+          <!-- Campo oculto para artista seleccionado via botón -->
+          <input type="hidden" id="artista_seleccionado" name="artista_seleccionado" value="">
+          
+          <button type="submit" class="btn btn--primary btn--full">Enviar solicitud</button>
+          <p class="form__note">* Campos obligatorios. Respondemos en menos de 24h.</p>
+        </form>
+
+        <!-- Información de contacto directa -->
+        <div class="contacto__info">
+          <div class="info__item">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <h4>WhatsApp Directo</h4>
+              <a href="https://wa.me/5218121972533?text=Hola%20Colectivo%20Primario..." 
+                 class="info__link" 
+                 target="_blank" 
+                 rel="noopener"
+                 onclick="trackConversion('whatsapp_info_click')">
+                +52 1 81 2197 2533
+              </a>
+              <small>Respuesta en menos de 24h</small>
+            </div>
+          </div>
+          
+          <div class="info__item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Correo Electrónico</h4>
+              <a href="mailto:gmrqzf@gmail.com" class="info__link">gmrqzf@gmail.com</a>
+              <small>Guillermo Márquez - Contacto directo</small>
+            </div>
+          </div>
+          
+          <div class="info__item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Ubicación</h4>
+              <p>Monterrey, Nuevo León<br><small>Cita previa obligatoria</small></p>
+            </div>
+          </div>
+          
+          <div class="info__item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>Horario de Atención</h4>
+              <p>Lunes - CERRADO</p>
+              <p>Martes - Domingo<br>11:00 am - 7:00 pm</p>
+            </div>
+          </div>
+          
+          <div class="contacto__social">
+            <a href="#" aria-label="Instagram Colectivo Primario"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook Colectivo Primario"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok Colectivo Primario"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <span class="logo__text">COLECTIVO</span>
+        <span class="logo__accent">PRIMARIO</span>
+        <p>Arte corporal con propósito, técnica y pasión.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#servicios">Servicios</a>
+        <a href="#artistas">Artistas</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#estudio">El Estudio</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer__legal">
+        <p>&copy; 2026 Colectivo Primario. Monterrey, NL. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/5218121972533?text=Hola%20Colectivo%20Primario,%20vi%20su%20página%20web..." 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="Contactar por WhatsApp ahora"
+     onclick="trackConversion('whatsapp_float_click')">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-label">¡Escríbenos!</span>
+  </a>
+
+  <!-- Scripts de funcionalidad y medición -->
+  <script src="script.js"></script>
+</body>
+</html>
