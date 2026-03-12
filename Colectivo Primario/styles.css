@@ -6,6 +6,14 @@
    Especialidad: Tatuajes y Piercings
    ======================================== */
 
+/* ========================================
+   COLECTIVO PRIMARIO - STYLES
+   Proyecto Académico | Ene-Abr 2026
+   Enfoque: Minimalista, Mobile-First, CRO
+   Fundamentos: Don Norman (UX) + Tim Ash (CRO) + Steve Krug (Usabilidad)
+   Especialidad: Tatuajes y Piercings
+   ======================================== */
+
 /* ----- VARIABLES CSS ----- */
 :root {
   /* Paleta de colores - Identidad visual del estudio */
@@ -18,9 +26,9 @@
   --color-error: #e74c3c;
   --color-success: #2ecc71;
   
-  /* Tipografía */
-  --font-primary: 'Montserrat', sans-serif;
-  --font-display: 'Playfair Display', serif;
+  /* Tipografía - Nebulica Font Family */
+  --font-primary: 'Nebulica', sans-serif;
+  --font-display: 'Nebulica', sans-serif;
   
   /* Espaciado */
   --spacing-xs: 0.5rem;
