@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portafolio de Deba - Artista de tatuajes en Colectivo Primario. Especialista en Full Color, Fine Line y Black & Gray.">
+  <title>Portafolio Doek | Colectivo Primario</title>
+  
+  <!-- Fuentes Google (Mismas que el sitio principal) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* ================= VARIABLES ================= */
+    :root {
+      --color-primary: #1a1a1a;
+      --color-secondary: #2d2d2d;
+      --color-accent: #c9a55c; /* Dorado/Beige elegante */
+      --color-text: #f5f5f5;
+      --color-text-muted: #a0a0a0;
+      --color-bg: #0f0f0f;
+      --color-bg-card: #1a1a1a;
+      
+      --font-main: 'Montserrat', sans-serif;
+      --font-display: 'Playfair Display', serif;
+      
+      --spacing-sm: 0.5rem;
+      --spacing-md: 1rem;
+      --spacing-lg: 2rem;
+      --spacing-xl: 4rem;
+      
+      --border-radius: 8px;
+      --transition: all 0.3s ease;
+    }
+
+    /* ================= RESET ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    /* ================= UTILIDADES ================= */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-md);
+    }
+
+    .text-accent {
+      color: var(--color-accent);
+    }
+
+    .section {
+      padding: var(--spacing-xl) 0;
+    }
+
+    .section__title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .section__subtitle {
+      text-align: center;
+      color: var(--color-text-muted);
+      margin-bottom: var(--spacing-xl);
+      font-size: 1.1rem;
+    }
+
+    /* ================= HEADER ================= */
+.header {
+  background-color: rgba(26, 26, 26, 0.95);
+  padding: var(--spacing-md) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.header__container {
+  display: flex;
+  justify-content: flex-start; /* CAMBIO: Alineado a la izquierda */
+  align-items: center;
+  gap: var(--spacing-lg); /* CAMBIO: Espacio entre logo y menú */
+  flex-wrap: wrap; /* Permitir que los elementos bajen en móvil */
+}
+
+/* ===== LOGO CON IMAGEN + TEXTO (NUEVO) ===== */
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espacio entre imagen y texto */
+  padding: 4px 0;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo__img {
+  height: 40px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.logo__text-visible {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.logo__text-visible .logo__text {
+  font-size: 0.75rem;
+  color: var(--color-text); /* Usando variable del tema */
+  text-transform: uppercase;
+}
+
+.logo__text-visible .logo__accent {
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  text-transform: uppercase;
+}
+
+.logo__text--sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.header__logo:hover .logo__img {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* ===== NAVEGACIÓN ===== */
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.nav__link {
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+.nav__link:hover {
+  color: var(--color-accent);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767px) {
+  .header__container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+  
+  .logo__img {
+    height: 32px;
+    max-width: 120px;
+  }
+  
+  .logo__text-visible .logo__text {
+    font-size: 0.65rem;
+  }
+  
+  .logo__text-visible .logo__accent {
+    font-size: 0.8rem;
+  }
+  
+  .nav__list {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-sm);
+  }
+  
+  .nav__toggle {
+    display: block;
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav__toggle {
+    display: none;
+  }
+}
+
+    /* ================= HERO ARTISTA ================= */
+    .artist-hero {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+      padding: var(--spacing-xl) 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .artist-hero__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-xl);
+      align-items: center;
+    }
+
+    .artist-hero__image {
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    .artist-hero__image img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .artist-hero__image:hover img {
+      transform: scale(1.05);
+    }
+
+    .artist-hero__content h1 {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .artist-hero__specialty {
+      color: var(--color-accent);
+      font-weight: 600;
+      margin-bottom: var(--spacing-md);
+      font-size: 1.1rem;
+    }
+
+    .artist-hero__bio {
+      color: var(--color-text-muted);
+      margin-bottom: var(--spacing-lg);
+      font-size: 1.05rem;
+    }
+
+    /* ================= BOTONES ================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: var(--transition);
+      border: 2px solid transparent;
+    }
+
+    .btn--primary {
+      background-color: var(--color-accent);
+      color: var(--color-primary);
+    }
+
+    .btn--primary:hover {
+      background-color: #b08d4a;
+      transform: translateY(-2px);
+    }
+
+    .btn--outline {
+      background-color: transparent;
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    .btn--outline:hover {
+      background-color: var(--color-accent);
+      color: var(--color-primary);
+    }
+
+    .artist-hero__actions {
+      display: flex;
+      gap: var(--spacing-md);
+    }
+
+    /* ================= PORTAFOLIO GRID ================= */
+    .portfolio-filters {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-lg);
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--color-text-muted);
+      padding: 8px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-family: var(--font-main);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+      background: rgba(201, 165, 92, 0.1);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--spacing-md);
+    }
+
+    .portfolio-item {
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      aspect-ratio: 1;
+      cursor: pointer;
+      group: portfolio;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-item__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+      opacity: 0;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: var(--spacing-md);
+    }
+
+    .portfolio-item:hover .portfolio-item__overlay {
+      opacity: 1;
+    }
+
+    .portfolio-item__title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+
+    .portfolio-item__category {
+      color: var(--color-accent);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ================= ESTADISTICAS ================= */
+    .artist-stats {
+      background-color: var(--color-bg-card);
+      padding: var(--spacing-lg) 0;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-md);
+      text-align: center;
+    }
+
+    .stat-item__number {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    .stat-item__label {
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ================= FOOTER ================= */
+    .footer {
+      background-color: var(--color-primary);
+      padding: var(--spacing-lg) 0;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer__logo {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .footer__logo .logo__accent {
+      color: var(--color-accent);
+    }
+
+    .footer__text {
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 768px) {
+      .artist-hero__container {
+        grid-template-columns: 1fr;
+      }
+      
+      .artist-hero__image img {
+        height: 350px;
+      }
+      
+      .artist-hero__content h1 {
+        font-size: 2rem;
+      }
+      
+      .nav__list {
+        display: none;
+      }
+      
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+      }
+      
+      .section__title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ <!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="container header__container">
+    
+    <!-- Logo + Texto -->
+    <a href="index.html" class="header__logo" aria-label="Ir al inicio">
+      <img src="Imagenes/COLECTIVOPRIMARIOLOGO.PNG" 
+           alt="Colectivo Primario - Logo" 
+           class="logo__img"
+           width="150"
+           height="50"
+           loading="eager">
+      <!-- Texto visible junto al logo -->
+      <span class="logo__text-visible">
+        <span class="logo__text">COLECTIVO</span>
+        <span class="logo__accent">PRIMARIO</span>
+      </span>
+      <!-- Texto para accesibilidad -->
+      <span class="logo__text--sr">Colectivo Primario</span>
+    </a>
+    
+    <!-- Navegación -->
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <ul class="nav__list">
+        <li><a href="index.html#servicios" class="nav__link">Servicios</a></li>
+        <li><a href="index.html#artistas" class="nav__link">Artistas</a></li>
+        <li><a href="index.html#portafolio" class="nav__link">Portafolio</a></li>
+        <li><a href="index.html#estudio" class="nav__link">El Estudio</a></li>
+        <li><a href="index.html#contacto" class="nav__link nav__link--cta">Contacto</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+    
+  </div>
+</header>
+
+  <!-- ================= HERO ARTISTA ================= -->
+  <section class="artist-hero">
+    <div class="container artist-hero__container">
+      <div class="artist-hero__image">
+        <!-- Ruta actualizada según tu estructura -->
+        <img src="Imagenes/doekFP.jpg" 
+             alt="Deba - Artista de tatuajes" 
+             loading="lazy">
+      </div>
+      
+      <div class="artist-hero__content">
+        <h1>Doek</h1>
+        <p class="artist-hero__specialty">Blackwork • Black & Gray • Fine Line</p>
+        <p class="artist-hero__bio">
+          Experto en blackwork contemporáneo y técnica de línea fina. Crea diseños únicos en blanco y negro con sombreados precisos 
+          que combinan bold lines con detalles delicados y minimalistas.
+        </p>
+        
+        <div class="artist-hero__actions">
+          <a href="https://wa.me/5218126082227?text=Hola,%20me%20interesa%20agendar%20con%20Deba..." 
+             class="btn btn--primary"
+             target="_blank">
+            <i class="fab fa-whatsapp"></i> Agendar Cita
+          </a>
+          <a href="index.html#contacto" class="btn btn--outline">
+            Enviar Mensaje
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTAFOLIO ================= -->
+  <section class="section portfolio">
+    <div class="container">
+      <h2 class="section__title">Portafolio <span class="text-accent">Doek</span></h2>
+      <p class="section__subtitle">Explora una selección de mis trabajos recientes</p>
+      
+      <!-- Filtros -->
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="blackwork">Blackwork</button>
+        <button class="filter-btn" data-filter="blackgray">Black & Gray</button>
+        <button class="filter-btn" data-filter="fineline">Fine Line</button>
+      </div>
+
+      <!-- Grid de imágenes -->
+      <div class="portfolio-grid">
+        
+        <!-- Item 1: Color -->
+        <figure class="portfolio-item" data-category="blackwork">
+          <!-- Placeholder: Reemplaza con tus imágenes reales -->
+          <img src="Imagenes/DoekBW1.jpg" 
+               alt="Tatuaje color floral" 
+               loading="lazy">
+          <div class="portfolio-item__overlay">
+            <h3 class="portfolio-item__title"></h3>
+            <span class="portfolio-item__category">Blackwork</span>
+          </div>
+        </figure>
+
+        <!-- Item 2: Fine Line -->
+        <figure class="portfolio-item" data-category="fineline">
+          <img src="Imagenes/doekfl1.jpg" 
+               alt="Tatuaje fine line minimalista" 
+               loading="lazy">
+          <div class="portfolio-item__overlay">
+            <h3 class="portfolio-item__title"></h3>
+            <span class="portfolio-item__category">Fine Line</span>
+          </div>
+        </figure>
+
+        <!-- Item 3: Black & Gray -->
+        <figure class="portfolio-item" data-category="blackgray">
+          <img src="Imagenes/doekbg.jpg" 
+               alt="Tatuaje black and gray" 
+               loading="lazy">
+          <div class="portfolio-item__overlay">
+            <h3 class="portfolio-item__title"></h3>
+            <span class="portfolio-item__category">Black & Gray</span>
+          </div>
+        </figure>
+
+        <!-- Item 4: Color -->
+        <figure class="portfolio-item" data-category="fineline">
+          <img src="Imagenes/doekfl2.jpg" 
+               alt="Tatuaje color tradicional" 
+               loading="lazy">
+          <div class="portfolio-item__overlay">
+            <h3 class="portfolio-item__title"></h3>
+            <span class="portfolio-item__category">Fine Line</span>
+          </div>
+        </figure>
+
+        <!-- Item 5: Fine Line -->
+        <figure class="portfolio-item" data-category="blackgray">
+          <img src="Imagenes/doekblackgray.jpg" 
+               alt="Tatuaje fine line geométrico" 
+               loading="lazy">
+          <div class="portfolio-item__overlay">
+            <h3 class="portfolio-item__title"></h3>
+            <span class="portfolio-item__category">Black & Gray</span>
+          </div>
+        </figure>
+
+        <!-- Item 6: Black & Gray -->
+        <figure class="portfolio-item" data-category="blackwork">
+          <img src="Imagenes/doekbwcalaca.jpg" 
+               alt="Tatuaje blackwork" 
+               loading="lazy">
+          <div class="portfolio-item__overlay">
+            <h3 class="portfolio-item__title"></h3>
+            <span class="portfolio-item__category">Blackwork</span>
+          </div>
+        </figure>
+
+      </div>
+      
+      <!-- CTA Final -->
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="https://wa.me/5218126082227?text=Hola,%20vi%20el%20portafolio%20de%20Deba%20y%20me%20interesa%20un%20diseño..." 
+           class="btn btn--primary"
+           target="_blank">
+          <i class="fab fa-whatsapp"></i> Cotizar Diseño
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">
+        <span class="logo__text">COLECTIVO</span>
+        <span class="logo__accent">PRIMARIO</span>
+      </div>
+      <p class="footer__text">
+        &copy; 2026 Colectivo Primario. Monterrey, NL.<br>
+        Arte corporal con propósito, técnica y pasión.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPT FILTROS ================= -->
+  <script>
+    // Funcionalidad simple para filtrar portafolio
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Remover clase active de todos
+          filterBtns.forEach(b => b.classList.remove('active'));
+          // Agregar a este
+          this.classList.add('active');
+          
+          const filter = this.dataset.filter;
+          
+          portfolioItems.forEach(item => {
+            if (filter === 'all' || item.dataset.category === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
